@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "exportedAt": "2026-02-25T04:23:39.850Z",
+  "manualPracticalSchedules": [
+    {
+      "id": "mp-1771992321614-77398",
+      "enabled": true,
+      "mode": "weekly",
+      "weekday": 8,
+      "date": "",
+      "slot": "afternoon",
+      "timeRange": "13:00-18:30",
+      "subject": "Thực hành Điện tử (Tương tự và Số)",
+      "class": "DHTD18A2HN",
+      "room": "H.A10-904",
+      "teacher": "Phạm Văn Nam"
+    },
+    {
+      "id": "mp-1771992958859-81990",
+      "enabled": true,
+      "mode": "weekly",
+      "weekday": 6,
+      "date": "",
+      "slot": "morning",
+      "timeRange": "06:00-11:30",
+      "subject": "Thực hành Điện tử công suất và ứng dụng",
+      "class": "DHTD18A2HN",
+      "room": "HA10-702",
+      "teacher": "Bùi Thị Hồng Diễm"
+    }
+  ]
+}
