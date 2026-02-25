@@ -1,0 +1,190 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #0f172a;
+}
+
+.app {
+  width: 720px;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.brand-header img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+#brandText {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #475569;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #334155;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  height: 34px;
+  padding: 0 8px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 10px;
+  resize: vertical;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.checkbox-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.single-input {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.grid-actions button {
+  min-width: 140px;
+}
+
+button {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #1f2937;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #eef2ff;
+}
+
+button.primary {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+}
+
+button.primary:hover {
+  background: #1d4ed8;
+}
+
+.status {
+  min-height: 18px;
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+
+.status.success {
+  color: #065f46;
+}
+
+.status.error {
+  color: #b91c1c;
+}
+
+.status.info {
+  color: #1d4ed8;
+}
+
+.table-wrap {
+  overflow: auto;
+  margin-top: 10px;
+}
+
+#manualTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+#manualTable th,
+#manualTable td {
+  border: 1px solid #e2e8f0;
+  padding: 6px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#manualTable th {
+  background: #f8fafc;
+}
+
+.row-actions {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}

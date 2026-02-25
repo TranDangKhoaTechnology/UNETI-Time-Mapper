@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNETI Time Mapper</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="brand-header">
+        <img id="brandLogo" alt="logo">
+        <div>
+          <h1>UNETI Time Mapper</h1>
+          <p id="brandText">Bản quyền TranDangKhoaTechnology</p>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2>Lịch thực hành bổ sung</h2>
+        <form id="manualForm">
+          <input type="hidden" id="manualEditId">
+          <div class="grid">
+            <label>
+              Môn học
+              <input id="manualSubject" type="text" placeholder="Ví dụ: Thực hành PLC">
+            </label>
+            <label>
+              Lớp
+              <input id="manualClass" type="text" placeholder="Ví dụ: DHTD18A2HN">
+            </label>
+            <label>
+              Phòng
+              <input id="manualRoom" type="text" placeholder="Ví dụ: HA10-702">
+            </label>
+            <label>
+              Giảng viên
+              <input id="manualTeacher" type="text" placeholder="Ví dụ: Nguyễn Văn A">
+            </label>
+            <label>
+              Kiểu áp dụng
+              <select id="manualMode">
+                <option value="weekly">Hàng tuần theo thứ</option>
+                <option value="date">Theo ngày cụ thể</option>
+              </select>
+            </label>
+            <label id="manualWeekdayWrap">
+              Thứ
+              <select id="manualWeekday">
+                <option value="2">Thứ 2</option>
+                <option value="3">Thứ 3</option>
+                <option value="4">Thứ 4</option>
+                <option value="5">Thứ 5</option>
+                <option value="6">Thứ 6</option>
+                <option value="7">Thứ 7</option>
+                <option value="8">Chủ nhật</option>
+              </select>
+            </label>
+            <label id="manualDateWrap" style="display:none;">
+              Ngày cụ thể
+              <input id="manualDate" type="date">
+            </label>
+            <label>
+              Khung giờ thực hành
+              <select id="manualSlot">
+                <option value="morning">06:00 - 11:30 (Sáng)</option>
+                <option value="afternoon">13:00 - 18:30 (Chiều)</option>
+              </select>
+            </label>
+            <label class="full checkbox-row">
+              <input id="manualEnabled" type="checkbox" checked>
+              Bật bản ghi này
+            </label>
+          </div>
+          <div class="actions">
+            <button id="btnManualSave" type="submit" class="primary">Lưu bản ghi</button>
+            <button id="btnManualReset" type="button">Hủy chỉnh sửa</button>
+          </div>
+          <p id="manualStatus" class="status"></p>
+        </form>
+
+        <div class="table-wrap">
+          <table id="manualTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Môn</th>
+                <th>Lớp</th>
+                <th>Phòng</th>
+                <th>GV</th>
+                <th>Áp dụng</th>
+                <th>Khung giờ</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="manualTableBody"></tbody>
+          </table>
+        </div>
+        <div class="actions">
+          <button id="btnManualImport" type="button">Import lịch TH</button>
+          <button id="btnManualExport" type="button">Export lịch TH</button>
+        </div>
+        <input id="manualImportFileInput" type="file" accept=".json,application/json" hidden>
+      </section>
+
+      <section class="card">
+        <h2>Branding</h2>
+        <label class="single-input">
+          Link thương hiệu (tùy chọn)
+          <input id="brandingLinkInput" type="text" placeholder="https://...">
+        </label>
+        <div class="actions">
+          <button id="btnBrandingSave" type="button">Cập nhật link thương hiệu</button>
+        </div>
+        <p id="brandingStatus" class="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>Cấu hình JSON tổng</h2>
+        <textarea id="configInput" spellcheck="false"></textarea>
+        <div class="actions grid-actions">
+          <button id="btnSaveConfig" class="primary" type="button">Lưu cấu hình</button>
+          <button id="btnSyncFromJson" type="button">Đồng bộ từ JSON</button>
+          <button id="btnLoadDefault" type="button">Khôi phục mặc định</button>
+          <button id="btnImport" type="button">Import JSON</button>
+          <button id="btnExport" type="button">Export JSON</button>
+        </div>
+        <input id="importFileInput" type="file" accept=".json,application/json" hidden>
+        <p id="configStatus" class="status"></p>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

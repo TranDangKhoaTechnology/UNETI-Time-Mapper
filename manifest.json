@@ -1,0 +1,48 @@
+﻿{
+  "manifest_version": 3,
+  "name": "UNETI Time Mapper",
+  "version": "1.0.0",
+  "description": "Quy đổi tiết học sang giờ cụ thể trên cổng sinh viên UNETI.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://sinhvien.uneti.edu.vn/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "UNETI Time Mapper",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sinhvien.uneti.edu.vn/*"
+      ],
+      "js": [
+        "content/content-script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "config/schedule-default.json",
+        "assets/image/logo.png"
+      ],
+      "matches": [
+        "https://sinhvien.uneti.edu.vn/*"
+      ]
+    }
+  ]
+}
