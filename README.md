@@ -43,9 +43,14 @@ Chrome Extension (Manifest V3) cho `https://sinhvien.uneti.edu.vn/*` với các 
    - Mở trang `https://sinhvien.uneti.edu.vn/ket-qua-hoc-tap.html`.
    - Mở popup extension, dùng khối `Xuất điểm / GPA`, chọn `XLSX/CSV/JSON`.
    - Trên chính website có nút `Bật sửa điểm inline`: click trực tiếp vào ô điểm trên bảng gốc để sửa, `Enter` lưu, `Esc` hủy ô đang sửa.
-   - Khi sửa điểm trực tiếp trên bảng gốc, GPA cập nhật realtime ngay theo thay đổi.
-   - Nút `Tính TB thường kỳ` chỉ dùng để tự tính `TB thường kỳ` cho các môn đã chọn (`Ctrl/Cmd + click` để chọn nhiều).
-   - Có nút `Khôi phục tất cả` để trả toàn bộ dữ liệu về mặc định trong tab hiện tại; ô và summary GPA thay đổi sẽ được tô vàng để nhận biết.
+   - Quy trình dự đoán điểm/GPA trực tiếp trên web:
+     - Dự đoán nhanh: sửa trực tiếp ô `Điểm tổng kết` (hoặc các ô thành phần/điểm thi) của môn cần thử.
+     - Nếu cần tính lại theo nhóm môn: giữ `Ctrl/Cmd + click` để chọn nhiều môn, bấm `Tính TB thường kỳ`.
+     - GPA học kỳ + GPA tích lũy cập nhật realtime ngay sau khi bạn sửa.
+     - `Điểm chữ`, `Xếp loại`, trạng thái `Đạt/Không đạt` và màu đỏ/bình thường của môn sẽ tự đồng bộ theo điểm dự đoán hiện tại.
+     - Bấm `Khôi phục tất cả` để quay về dữ liệu gốc của tab hiện tại.
+   - Dữ liệu dự đoán chỉ lưu tạm trong tab đang mở (reload trang sẽ về mặc định).
+   - Export sau khi đã chỉnh sửa sẽ lấy đúng dữ liệu predicted hiện tại trong tab.
    - File XLSX có 4 sheet:
      - `Grades`: bảng gọn để sửa nhanh `Total10 (Edit)` + công thức.
      - `Grades_Detail`: bảng chi tiết đầy đủ điểm thành phần.
