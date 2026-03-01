@@ -116,6 +116,75 @@
       </section>
 
       <section class="card">
+        <h2>Xuất lịch học</h2>
+        <div class="grid">
+          <label>
+            Định dạng
+            <select id="exportFormat">
+              <option value="xlsx">XLSX</option>
+              <option value="csv">CSV</option>
+              <option value="json">JSON</option>
+              <option value="html">HTML</option>
+              <option value="png">PNG</option>
+              <option value="pdf">PDF</option>
+            </select>
+          </label>
+          <label>
+            Phạm vi
+            <select id="exportRange">
+              <option value="week">Theo tuần đang xem</option>
+              <option value="month">Theo tháng</option>
+            </select>
+          </label>
+          <label id="exportMonthWrap" style="display:none;">
+            Tháng
+            <input id="exportMonth" type="month">
+          </label>
+          <label id="exportMonthLayoutWrap" style="display:none;">
+            Bố cục tháng
+            <select id="exportMonthLayout">
+              <option value="timetable">Thời khóa biểu</option>
+              <option value="list">Danh sách</option>
+            </select>
+          </label>
+          <label class="full">
+            Loại lịch hiện tại trên tab
+            <input id="exportScheduleType" type="text" readonly>
+          </label>
+        </div>
+        <div class="actions">
+          <button id="btnExportNow" class="primary" type="button">Xuất trực tiếp</button>
+          <button id="btnOpenExportPanel" type="button">Mở panel trên trang</button>
+          <button id="btnRefreshExportContext" type="button">Làm mới ngữ cảnh</button>
+        </div>
+        <p id="exportStatus" class="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>Xuất điểm / GPA</h2>
+        <div class="grid">
+          <label>
+            Định dạng
+            <select id="gradeFormat">
+              <option value="xlsx">XLSX</option>
+              <option value="csv">CSV</option>
+              <option value="json">JSON</option>
+            </select>
+          </label>
+          <label class="full">
+            Trạng thái
+            <input id="gradeContext" type="text" value="--" readonly>
+          </label>
+        </div>
+        <p id="gradeHint" class="hint">Mở trang Kết quả học tập để xuất; sửa điểm trực tiếp sẽ tự cập nhật GPA. Giữ Ctrl/Cmd + click để chọn nhiều môn, rồi bấm Tính TB thường kỳ.</p>
+        <div class="actions">
+          <button id="btnGradeExportNow" class="primary" type="button">Xuất bảng điểm ngay</button>
+          <button id="btnRefreshGradeContext" type="button">Làm mới ngữ cảnh điểm</button>
+        </div>
+        <p id="gradeStatus" class="status"></p>
+      </section>
+
+      <section class="card">
         <h2>Cấu hình JSON tổng</h2>
         <textarea id="configInput" spellcheck="false"></textarea>
         <div class="actions grid-actions">

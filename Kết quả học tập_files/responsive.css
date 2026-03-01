@@ -1,0 +1,195 @@
+
+@media (max-width: 1200px) {
+	.header .menu-top {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 250px;
+	    height: 100%;
+	    background-color: #fff;
+	    padding: 25px 10px 25px 20px;
+	    opacity: 0;
+	    visibility: hidden;
+	    z-index: 0;
+	    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		margin: 0;
+	}
+	.header .menu-top ul li {
+	    float: left;
+	    width: 100%;
+	    text-align: left;
+	    padding: 10px 0;
+	}
+	.header .menu-top ul li span {
+	    display: inline-block;
+	    margin-right: 10px;
+	}
+	.header .menu-top ul li .badge {
+		margin: 0
+	}
+	.menu-btn {
+	    display: block
+	}
+	.header .menu-top.active {
+	    opacity: 1;
+	    visibility: visible;
+	    z-index: 9999;
+		overflow-y: scroll;
+	}
+
+    #config-tool {
+        display: none;
+    }
+
+    #accordion-menu-mb.accordion-menu ul li a {
+        padding: 0;
+        display: block;
+        background: unset;
+        color: #667580;
+        border: none !important
+    }
+
+    .accordion-menu ul li a:hover {
+        color: inherit !important;
+        background: unset !important;
+    }
+
+    #accordion-menu-mb .submenu {
+        padding-left: 27px;
+    }
+
+	.dashboard__profile--content .rowspan3 {
+		grid-template-columns: repeat(2,2fr);
+		grid-template-rows: auto;
+	}
+ 
+	.list__cate {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+	.accordion-menu ul li a .submenu-indicator {
+		margin-right: unset;
+	}
+}
+
+@media only screen and (min-width: 1201px) {
+    #accordion-menu-mb {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+  	.main-dashboard .profile-ds-info {
+	    height: auto;
+	    overflow: unset;
+	}
+	.featured {
+		flex-flow: wrap; 
+	}
+    .featured-item {
+        width: 50%;
+    }
+	.header .search-bar {
+		width: 200px;
+	}
+	.dashboard__profile--content .rowspan4 {
+		grid-template-columns: repeat(1,1fr);
+		grid-template-rows: auto;
+	}
+	.dashboard-box {
+		margin-bottom: 16px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+  	.main-dashboard .profile-ds-info .col-sm-3{
+	    margin-bottom: 30px;
+	}
+	.group-cautraloi.list-inline>li {
+		display: block
+	}
+	.user-account-name-caret-down {
+		padding: 9px 3px 0px 0px;
+		font-size: 20px !important;
+		position: unset !important;
+	}
+
+	.user-account-name {
+		display: none
+	}
+	.user-account-img {		
+		display: none
+	}
+	.mainMn .listMenu li {
+		width: 49%;
+	}
+	.dashboard__profile--content .rowspan3 {
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.lightbox-content .story-img {
+		margin-right: 0;
+	    margin-left: 0;
+	    width: 100%;
+	    height: calc(100% - 350px);
+	    position: relative;
+    	display: flex;
+    	flex-direction: column;
+	}
+	.header .search-bar {
+	    width: 150px;
+	    display: none;
+	}
+}
+
+
+@media only screen and (max-width: 550px) {
+	
+}
+
+@media only screen and (max-width: 500px) {
+	.mainMnBtn {
+		display: none
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.header .search-bar {
+	    width: 150px;
+	    display: none;
+	}
+    .notification .item .image {
+        width: 100%;
+        margin-right: 0;
+        float: unset;
+    }
+    .notification .item .desc-txt {
+        width: 100%;
+        float: unset;
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+	.header .search-bar {
+	    display: none
+	}
+}
+.header .menu-top.active::-webkit-scrollbar {
+	width: 3px;
+}
+.header .menu-top.actives::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.header .menu-top.active::-webkit-scrollbar-thumb {
+	background: #adb3be;
+}
+
+	.header .menu-top.active::-webkit-scrollbar-thumb:hover {
+		background: #7a7676;
+	}
+.accordion-menu ul li a .submenu-indicator i {
+	width: 15px;
+}

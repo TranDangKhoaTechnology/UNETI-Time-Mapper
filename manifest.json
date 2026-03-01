@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "description": "Quy đổi tiết học sang giờ cụ thể trên cổng sinh viên UNETI.",
   "permissions": [
-    "storage"
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
   ],
   "host_permissions": [
     "https://sinhvien.uneti.edu.vn/*"
@@ -29,7 +32,20 @@
         "https://sinhvien.uneti.edu.vn/*"
       ],
       "js": [
-        "content/content-script.js"
+        "content/page-polyfill.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://sinhvien.uneti.edu.vn/*"
+      ],
+      "js": [
+        "content/content-script.js",
+        "vendor/exceljs.min.js",
+        "vendor/html2canvas.min.js",
+        "vendor/jspdf.umd.min.js"
       ],
       "run_at": "document_idle"
     }
